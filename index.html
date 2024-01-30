@@ -5,13 +5,16 @@
 	<title>Важный сайт</title>
 </head>
 <body>
-	<p">Всё еще варите кофе?</p></br>тогда мы идём к вам!</p>
+	<main id="container"></main>
+	<p></br>Всё еще варите кофе? тогда мы идём к вам!</p>
 	<button type="button" onclick="testAction()">Можно нажать, но ничего не произойдет.</br>может другой раз сработает</button>
 	<script>
 		function testAction() {
-			document.getElementById("myElement").innerHTML = "<p id="myElement">Вера Сергевна, не надо..</p>"
+			let paragraph = document.createElement('p');
+			paragraph.textContent = 'Вера Сергевна, не надо..';
+			let container = document.getElementById('container');
+			container.appendChild(paragraph);
 		}
 	</script>
 </body>
 </html>
-	
